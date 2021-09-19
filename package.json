@@ -1,0 +1,14 @@
+{
+  "name": "core-services",
+  "version": "1.0.0",
+  "description": "Okra Test",
+  "main": "Question 1 - Troubleshooting.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "okra-ng"
+  ],
+  "author": "Idris Adeniji",
+  "license": "ISC"
+}
