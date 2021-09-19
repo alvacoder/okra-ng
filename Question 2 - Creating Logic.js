@@ -21,3 +21,15 @@ function refundCustomer(company, user, amount) {
   }
   
 refundCustomer('484929849', '573839293', 2003.0)
+
+function taskTwo(username, password, variable) {
+  let user;
+  axios.post('https://api.okra.ng/v2/mock-api/login', { username, password }).then(result => {
+    user = result.data.data;
+    console.log(user);
+  }).catch(error => {
+    console.log(error);
+  })
+}
+
+taskTwo('okra_user', 'okra_pass', 1000);
