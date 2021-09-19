@@ -36,6 +36,8 @@ function connectApp() {
         new_account.connected_apps.push(app.slug)
       }
       new_accounts.push(new_account)
+    } else {
+      new_accounts.push(new_account)
     }
   })
   user.accounts = new_accounts
