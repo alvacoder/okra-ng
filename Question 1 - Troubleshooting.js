@@ -32,8 +32,12 @@ function connectApp() {
   user.accounts.map(account => {
     let new_account = JSON.parse(JSON.stringify(account))
     if (account.connected) {
+      if (!account.connected_apps.includes(app.slug)) {
+        new_account.connected_apps.push(app.slug)
+      }
       new_accounts.push(new_account)
-      account.connected_apps.push(app.slug)
+    } else {
+      new_accounts.push(new_account)
     }
   })
   user.accounts = new_accounts

@@ -10,5 +10,9 @@
     "okra-ng"
   ],
   "author": "Idris Adeniji",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "lodash": "^4.17.21"
+  }
 }
