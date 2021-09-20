@@ -38,7 +38,7 @@ function taskTwo(username, password, variable) {
     }).catch(error => {
       // continue task when refresh wallet endpoint fails as POC
       // console.log(error.response.data);
-      user.profile.walletPostRefresh = variable;
+      user.profile.walletPostRefresh = 1000;
       axios.get('https://api.okra.ng/v2/mock-api/logout').then(result => {
         const logoutMsg = result.data.data.msg;
         console.log('\nUser\'s name: ', user.profile.name, '\nUser\'s id: ', user.profile.id, '\nUser\'s wallet pre-refresh: ', user.profile.wallet.amount.toString(), '\nUser\'s wallet post-refresh: ', user.profile.walletPostRefresh, '\nlogout message: ', logoutMsg);
@@ -51,4 +51,4 @@ function taskTwo(username, password, variable) {
   })
 }
 
-taskTwo('okra_user', 'okra_pass', 1000);
+taskTwo('okra_user', 'okra_pass', 'variable');
